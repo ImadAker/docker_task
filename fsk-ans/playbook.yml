@@ -1,0 +1,6 @@
+- name: Configuration
+  connection: local
+  hosts: server
+  roles:
+    - app_start
+

@@ -1,0 +1,5 @@
+- name: Configuration
+  hosts: server
+  connection: local
+  roles:
+    - docker

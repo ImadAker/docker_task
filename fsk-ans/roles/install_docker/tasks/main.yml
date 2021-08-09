@@ -1,0 +1,5 @@
+#- name: get script
+ # shell: curl -fsSL https://get.docker.com -o get-docker.sh
+#- name: run script
+ # shell: DRY_RUN=1 sh ./get-docker.sh
+
