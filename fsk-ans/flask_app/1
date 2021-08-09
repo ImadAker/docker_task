@@ -1,6 +1,6 @@
 from flask import Flask
 import mysql.connector
-import logging
+import logger
 app = Flask(__name__)
 config = {
         'user': 'root',
@@ -9,14 +9,10 @@ config = {
         'port': '3306',
         'database': 'stats'
 }
-logging.basicConfig(filename="newfile.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='w')
-logger=logging.getLogger()
 def func_logger(func):
     def inner(*args):
         ret=func(*args)
-        logger.info(f'Call function {func.__name__} with {args}')
+        Logger.info(f'Call function {func.__name__} with {args}')
         return ret
     return inner
 

@@ -1,13 +1,12 @@
 - name: copy Docker Compose files
   copy:
-    src: /tmp/fsk-ans/flask_app
+    src: ./flask_app
     dest: /tmp
 
 - name: Run container
   become: True
   shell:
-    cmd: "docker-compose -f docker-compose.yml  up -d"
-    chdir: /tmp/flask_app
+    cmd: "docker-compose -f ./flask_app/docker-compose.yml  up -d  && bash ./flask_app/sc.sh "
 - name: Take readings and put into database
   ansible.builtin.cron:
     name: "fill database"
