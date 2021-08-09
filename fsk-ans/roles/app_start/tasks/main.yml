@@ -14,7 +14,7 @@
 - name: Take readings and put into database
   ansible.builtin.cron:
     name: "fill database"
-    minute: "*"
+    minute: "0"
     hour: "*"
     job: "bash /tmp/flask_app/sc.sh"
 
