@@ -16,4 +16,6 @@ services:
             - db:db
         ports:
             - "5000:5000"
+        volumes:
+            - /var/log/performance.log:/var/log/performance.log
         

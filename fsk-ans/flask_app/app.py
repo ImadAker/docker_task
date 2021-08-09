@@ -9,7 +9,7 @@ config = {
         'port': '3306',
         'database': 'stats'
 }
-logging.basicConfig(filename="newfile.log",
+logging.basicConfig(filename="/var/log/performance.log",
                     format='%(asctime)s %(message)s',
                     filemode='w')
 logger=logging.getLogger()

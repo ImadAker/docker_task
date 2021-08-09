@@ -2,7 +2,11 @@
   copy:
     src: ./flask_app
     dest: /tmp
-
+- name: create logging file
+  file:
+    path: /var/log/performance.log
+    state: touch
+    mode: 0644
 - name: Run container
   become: True
   shell:
