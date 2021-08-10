@@ -11,6 +11,7 @@ Follow these steps to run this application:
 3. Make sure Ansible is installed (if not use:`yum install epel-release ansible` )
 4. Run the app 
 `ansible-playbook -i inventory.txt playbook.yml`
+
 5.The flask application should be running and heres how to use it
     1. To get cpu percentages over the last 24 hours use http://(hostip):5000/cpu usage
     2. To get memory percentages over the last 24 hours use http://(hostip):5000/mem usage
